@@ -30,6 +30,9 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
     setIsOpen((prev) => !prev);
   };
   const addProduct = (product: CartProduct) => {
+    // Verificar se o produto já está no carrinho
+    // Se estiver, aumente a sua quantidade
+    // Se não estiver, adicione-o
     const productIsAlreadyOnTheCart = products.some(
       (prevProduct) => prevProduct.id === product.id,
     );
